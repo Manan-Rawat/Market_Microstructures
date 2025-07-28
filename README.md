@@ -22,7 +22,8 @@ This document explores trade sign autocorrelation and order flow modeling using 
 ---
 
 ### 4. `PriceImpact_1753676290.pdf` – **BTC Metaorder Detection and Price Impact**
-This notebook analyzes market impact of metaorders on Bitcoin, Ethereum, and Cardano using high-frequency limit order book data. It identifies directional trading windows based on volume imbalance and fits power-law models between price impact and order flow intensity. By extracting and filtering metaorders, the study reveals how price impact scales with net volume-to-total volume ratios, across crypto assets.
+This notebook analyzes market impact of metaorders on Bitcoin, Ethereum, and Cardano using high-frequency limit order book data. It identifies directional trading windows based on volume imbalance and fits power-law models between price impact and order flow intensity. By extracting and filtering metaorders, the study reveals how price impact scales with net volume-to-total volume ratios, across crypto assets. 
+
 ---
 
 ### 5. `ADA1_1753676291.pdf` – **ADA 5-Minute FP Strategy with Walk-Forward Validation**
