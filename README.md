@@ -26,33 +26,37 @@ This notebook analyzes market impact of metaorders on Bitcoin, Ethereum, and Car
 
 ---
 
-### 5. `ADA.ipynb` – **ADA 5-Minute FP Strategy with Walk-Forward Validation**
+
+### 5. Propagating_Models.ipynb – **BTC Impact Propagation and History-Dependent Modeling**
+This notebook analyzes the propagation of trade impacts on BTC using history-dependent impact models (HDIMs). Starting with sign series derived from net order flow, it measures trade sign autocorrelation and fits a power-law model. It then constructs synthetic impact propagators \( G(\ell) \sim \ell^{-\beta} \), convolves them with trade sign correlations to derive response functions, and simulates price evolution. Both Yule-Walker and DAR-based kernels are used to estimate impact dynamics. A synthetic HDIM price path is generated, and diffusion scaling is tested via log-log variance plots, revealing insights into microstructural price formation.
+
+---
+
+### 6. `ADA.ipynb` – **ADA 5-Minute FP Strategy with Walk-Forward Validation**
 Implements a Fokker-Planck model using Order book features as the input signal. Trains models on rolling windows, selecting the best one on validation segments. Evaluates three strategies: FP-based, Buy & Hold, and No Position Change — across different transaction cost scenarios.
 
 ---
 
-### 6. `BTC.ipynb` – **BTC 5-Minute FP with Rolling Selection**
+### 7. `BTC.ipynb` – **BTC 5-Minute FP with Rolling Selection**
 Applies the same FP modeling framework as ADA1 but to BTC. Features walk-forward model selection using validation PnL, and comprehensive test evaluation across fee/slippage combinations. Produces PnL comparisons between FP, Buy & Hold, and passive NPC strategies, showing strategy robustness.
 
 ---
 
-### 7. `ETH.ipynb` – **ETH 5-Minute FP Strategy**
+### 8. `ETH.ipynb` – **ETH 5-Minute FP Strategy**
 Implements the simplified FP signal model using Order book features as the primary driver. Applies the same segment-wise training, threshold optimization, and cost-aware evaluation as in BTC and ADA cases. Results validate that this modeling framework generalizes well to ETH market behavior.
 
 ---
 
-### 8. `1_min.ipynb` – **ADA 1-Minute FP Strategy**
+### 9. `1_min.ipynb` – **ADA 1-Minute FP Strategy**
 A more complex FP model for ADA at 1-minute resolution. Uses 10+ features including OBI, depth, and queue slope. Models signal with a stochastic differential equation, optimized using CMA-ES. Simulates trading strategy and evaluates it under transaction costs using rolling validation.
 
 ---
 
-### 9. `5_Min.ipynb` – **BTC 5-Minute FP Strategy with Full Features**
+### 10. `5_Min.ipynb` – **BTC 5-Minute FP Strategy with Full Features**
 Applies the full-feature FP modeling pipeline to BTC. Uses a rich feature set and stochastic simulation of signals. Evaluates strategy via rolling training/validation/testing split with transaction costs. This version is closest to a production-grade prototype for testing high-frequency strategies.
 
 ---
 
 ## 📈 Run the Models
 
-Each module can be executed as a script or converted into a Jupyter notebook:
-
-```python
+Each module can be executed as a script or converted into a Jupyter notebook.
