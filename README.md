@@ -27,7 +27,7 @@ This notebook analyzes market impact of metaorders on Bitcoin, Ethereum, and Car
 ---
 
 
-### 5. Propagating_Models.ipynb – **BTC Impact Propagation and History-Dependent Modeling**
+### 5. `Propagating_Models`.ipynb – **BTC Impact Propagation and History-Dependent Modeling**
 This notebook analyzes the propagation of trade impacts on BTC using history-dependent impact models (HDIMs). Starting with sign series derived from net order flow, it measures trade sign autocorrelation and fits a power-law model. It then constructs synthetic impact propagators \( G(\ell) \sim \ell^{-\beta} \), convolves them with trade sign correlations to derive response functions, and simulates price evolution. Both Yule-Walker and DAR-based kernels are used to estimate impact dynamics. A synthetic HDIM price path is generated, and diffusion scaling is tested via log-log variance plots, revealing insights into microstructural price formation.
 
 ---
